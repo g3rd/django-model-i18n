@@ -56,7 +56,7 @@ class SpanWidget(forms.Widget):
         except:
             pass
         final_attrs = self.build_attrs(attrs, name=name)
-        fl_attrs = forms.util.flatatt(final_attrs)
+        fl_attrs = forms.utils.flatatt(final_attrs)
         rep = u'<span%s >%s</span>' % (fl_attrs, display_value)
         if self.use_post:
             rep += u'<input type="hidden"%s value="%s" />' % (fl_attrs, original_value)

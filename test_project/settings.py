@@ -48,13 +48,6 @@ try:
 except:
     pass
 
-try:
-    import south
-    INSTALLED_APPS += ('south',)
-except:
-    pass
-
-
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',

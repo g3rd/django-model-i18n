@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from django.core.exceptions import ImproperlyConfigured
-from django.db import models
 
 
 # Helpers
@@ -40,9 +39,5 @@ def validate_fields(cls, model):
 # Global validator
 def validate(cls, model):
     """ Validates if model is well configured """
-    # Before we can introspect models, they need to be fully loaded so that
-    # inter-relations are set up correctly. We force that here.
-    models.get_apps()
-
     # Call each option validation
     validate_fields(cls, model)

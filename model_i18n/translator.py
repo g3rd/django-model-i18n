@@ -196,7 +196,7 @@ def trans_save(method):
     return wrapper
 
 
-@transaction.commit_on_success
+@transaction.atomic
 def i18n_save(instance, language, values={}, delete=False):
     if language not in dict(settings.LANGUAGES):
         raise ValueError(_('Incorrect language %(lang)s') % {'lang': language})

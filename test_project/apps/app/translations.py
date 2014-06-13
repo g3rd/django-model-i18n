@@ -12,7 +12,7 @@ class ItemTranslation(translator.ModelTranslation):
 
 
 class RelatedItemTranslation(translator.ModelTranslation):
-    fields = ('value',)
+    fields = ('data',)
 
 
 translator.register(Category, CategoryTranslation)

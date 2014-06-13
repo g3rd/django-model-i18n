@@ -1,5 +1,4 @@
 from django.views.generic import ListView, DetailView
-
 from app.models import Item
 
 
